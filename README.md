@@ -1,7 +1,7 @@
-## ArgoCD_POC
+# ArgoCD_POC
 Demonstrate GitOps deployment using ArgoCD by deploying a sample application on a Kubernetes cluster.
 
-# Setup Environment (MacOS)
+## Setup Environment (MacOS)
 
 Commands:
 ```
@@ -33,7 +33,7 @@ Expose ArgoCD API Server (for local access)
 kubectl port-forward svc/argocd-server -n argocd 8080:443
 ```
 
-# Get initial password
+Get initial password
 ```
 kubectl get secret argocd-initial-admin-secret -n argocd -o jsonpath="{.data.password}" | base64 -d
 argocd login localhost:8080
